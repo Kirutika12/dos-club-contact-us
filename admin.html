@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOS Club - Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="admin-dashboard">
+
+        <h1>
+            <i class="fa-solid fa-gauge-high"></i>
+            Admin Dashboard
+        </h1>
+
+        <p>View contact form submissions</p>
+
+
+        <!-- Dashboard Buttons -->
+        <div class="admin-actions">
+
+            <a href="index.html" class="back-home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Website
+            </a>
+
+            <a href="/api/logout" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+
+        <!-- Total Messages -->
+        <div class="admin-stat">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <div>
+                <span>Total Messages</span>
+                <strong id="message-count">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search messages..."
+            >
+
+        </div>
+
+
+        <!-- Messages -->
+        <div id="messages-container">
+            Loading messages...
+        </div>
+
+    </section>
+
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
