@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const Database = require("better-sqlite3");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 /* DATABASE */
@@ -288,10 +288,8 @@ app.get("/api/logout", function(req, res) {
 
 /* START SERVER */
 
-app.listen(PORT, function() {
-
+app.listen(PORT, "0.0.0.0", function() {
     console.log(
         `Server running at http://localhost:${PORT}`
     );
-
 });
